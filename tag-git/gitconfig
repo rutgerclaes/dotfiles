@@ -1,0 +1,6 @@
+# This is Git's per-user configuration file.
+[user]
+	name = Rutger Claes
+	email = rgc@rgc.be
+[core]
+	excludesfile = /Users/rutgerc/.gitignore_global

@@ -1,0 +1,27 @@
+if &compatible
+    set nocompatible
+end
+
+" Remove declared plugins
+function! s:UnPlug(plug_name)
+  if has_key(g:plugs, a:plug_name)
+    call remove(g:plugs, a:plug_name)
+  endif
+endfunction
+
+command!  -nargs=1 UnPlug call s:UnPlug(<args>)
+
+call plug#begin( '~/.vim/plugged' )
+
+" My Bundles here:
+"
+" original repos on github
+
+Plug 'tpope/vim-sensible'
+Plug 'tpope/vim-fugitive'
+Plug 'derekwyatt/vim-scala'
+Plug 'gabrielelana/vim-markdown'
+Plug 'scrooloose/nerdtree'
+Plug 'altercation/vim-colors-solarized'
+
+call plug#end()

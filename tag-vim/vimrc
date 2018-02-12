@@ -1,0 +1,56 @@
+syntax enable
+
+set showcmd   " show partial command in status line
+set showmatch " show matching bracket
+set showmode  " show mode
+set ruler     " show line and column number
+
+set incsearch " incremental search
+set hlsearch  " highlight search matches
+set ignorecase " ignore case while searching
+set smartcase " when searching for case, respect it
+
+set wildmode=list:longest,full
+set wildchar=<TAB>
+
+" Folding
+set foldmethod=syntax
+set nofoldenable
+
+let mapleader=","
+
+filetype off
+
+if filereadable(expand("~/.vimrc.bundles"))
+  source ~/.vimrc.bundles
+endif
+
+" NERDTree setup
+" autocmd vimenter * if !argc() | NERDTree | endif
+noremap <Leader>m :NERDTreeToggle<CR>
+
+set background=dark
+colorscheme solarized
+
+" Enable type filetype plugin
+filetype plugin indent on
+
+" Set backspace config
+set backspace=eol,start,indent
+set whichwrap+=<,>,h,l
+
+" No sounds on errors
+set noerrorbells
+set t_vb=
+set tm=500
+
+" Undo
+set noswapfile
+set nowb
+set nobackup
+
+" Tabs
+set tabstop=2
+set expandtab
+set shiftwidth=2
+set smarttab
