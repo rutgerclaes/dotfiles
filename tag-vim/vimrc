@@ -30,7 +30,11 @@ endif
 noremap <Leader>m :NERDTreeToggle<CR>
 
 set background=dark
+let g:solarized_termtrans = 1
 colorscheme solarized
+" highlight Normal ctermbg=none
+" highlight NonText ctermbg=none
+
 
 " Enable type filetype plugin
 filetype plugin indent on
