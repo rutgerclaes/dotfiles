@@ -2,5 +2,6 @@
 [user]
 	name = Rutger Claes
 	email = rgc@rgc.be
+	signingkey = 0xA940B26637A634AF
 [core]
 	excludesfile = /Users/rutgerc/.gitignore_global
