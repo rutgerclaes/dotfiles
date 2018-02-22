@@ -3,5 +3,22 @@
 	name = Rutger Claes
 	email = rgc@rgc.be
 	signingkey = 0xA940B26637A634AF
+
 [core]
 	excludesfile = /Users/rutgerc/.gitignore_global
+
+# Kaleidoscope integration below
+
+[difftool "kaleidoscope"]
+	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+[difftool]
+  prompt = false
+[diff]
+	tool = kaleidoscope
+
+[mergetool "kaleidoscope"]
+	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" \"$REMOTE\"
+[mergetool]
+	prompt = false
+[merge]
+	tool = Kaleidoscope
